@@ -36,7 +36,7 @@ const App = () => {
     }
   };
 */}
-
+{/*}
 const handleKeyUp = ({code}) => {
   if (code === 'ArrowUp') {
     setPosition({...position, orientation: position.orientation('up'), posX: position.posX - STEP_SIZE });
@@ -46,6 +46,19 @@ const handleKeyUp = ({code}) => {
     setPosition({...position, orientation: position.orientation('right'), posY: position.posY + STEP_SIZE });
   } else if (code === 'ArrowDown') {
     setPosition({...position, orientation: position.orientation('down'), posX: position.posX + STEP_SIZE });
+  }
+}
+*/}
+
+const handleKeyUp = ({code}) => {
+  if (code === 'ArrowUp') {
+    setPosition({...position, orientation: 'up', posX: position.posX - STEP_SIZE });
+  } else if (code === 'ArrowLeft') {
+    setPosition({...position, orientation: 'left', posY: position.posY - STEP_SIZE });
+  } else if (code === 'ArrowRight') {
+    setPosition({...position, orientation: 'right', posY: position.posY + STEP_SIZE });
+  } else if (code === 'ArrowDown') {
+    setPosition({...position, orientation: 'down', posX: position.posX + STEP_SIZE });
   }
 }
 
